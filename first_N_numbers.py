@@ -1,5 +1,5 @@
-N=int(input("Enter Number: "))
-count=1
-while count<=N:
+N = int(input("Enter Number: "))
+count = 1
+while count <= N:
     print(count)
-    count+=1
+    count += 1

@@ -1,21 +1,11 @@
-# Creating a bubble sort function
-def bubble_sort(local):
-    # Outer loop for traverse the entire list
-    for i in range(0, len(local) - 1):
-        for j in range(len(local) - 1):
-            if (local[j] > local[j + 1]):
-                temp = local[j]
-                local[j] = local[j + 1]
-                local[j + 1] = temp
-    return local
+# Selection sort in python in easy way
+def bubblesort(arr):
+    n = len(arr)
+    for i in range(n - 1, -1, -1):
+        for j in range(i):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    print(arr)
 
 
-array = [5, 3, 8, 6, 7, 2]
-print("The unsorted list is: ", array)
-# Calling the bubble sort function
-print("The sorted list is: ", bubble_sort(array))
-
-#Output
-#The unsorted list is:  [5, 3, 8, 6, 7, 2]
-#The sorted list is:  [2, 3, 5, 6, 7, 8]
-
+bubblesort([45, 1, 878, 23, 0, 15, 8])
